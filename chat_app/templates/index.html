@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1> witch room do you want to chat in </h1>
+
+<input type="radio" id="gaming" value="gaming">
+<label for="gaming">gaming</label><br><br>
+<input id="room-name-submit" type="button" value="Enter">
+<script>
+    document.getElementById('room-name-submit').onclick = function (e) {
+        var Room_name = document.getElementById('gaming').value;
+        window.location.pathname =  '/' + Room_name + '/';
+    }
+</script>
+</body>
+</html>

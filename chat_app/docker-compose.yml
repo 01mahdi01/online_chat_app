@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  django_app:
+    build:
+      context: .
+
+    environment:
+      - ALLOWED_HOSTS=0.0.0.0
+    ports:
+      - "8000:8000"

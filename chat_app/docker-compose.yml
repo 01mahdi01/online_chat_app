@@ -5,6 +5,6 @@ services:
       context: .
 
     environment:
-      - ALLOWED_HOSTS=0.0.0.0
+      - ALLOWED_HOSTS=*
     ports:
       - "8000:8000"

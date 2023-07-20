@@ -12,11 +12,22 @@
 
 <input type="radio" id="gaming" value="gaming">
 <label for="gaming">gaming</label><br><br>
+<input type="radio" id="muzic" value="muzic">
+<label for="muzic">muzic</label><br><br>
 <input id="room-name-submit" type="button" value="Enter">
 <script>
+
     document.getElementById('room-name-submit').onclick = function (e) {
-        var Room_name = document.getElementById('gaming').value;
-        window.location.pathname =  '/' + Room_name + '/';
+        if (document.getElementById('gaming').checked) {
+            var Room_name = document.getElementById('gaming').value;
+            window.location.pathname = '/' + Room_name + '/';
+        } else if (document.getElementById('muzic').checked) {
+            var Room_name = document.getElementById('muzic').value;
+            window.location.pathname = '/' + Room_name + '/';
+        } else {
+            console.log("nop")
+            window.location.reload()
+        }
     }
 </script>
 </body>
